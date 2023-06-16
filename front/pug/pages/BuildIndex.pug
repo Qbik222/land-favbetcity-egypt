@@ -1,56 +1,80 @@
 .bonus
+  .bonus__music
+    img(src='img/sound-off.svg' alt='sound')
   .bonus__overlay.opacity-overlay
+    .coin-container(id='coin-container')
     .bonus__firstWin.hide
-      .bonus__firstWin-image
-        .bonus__firstWin-bubble Так тримати!
-        picture.land__firstWin-main
-          source(media="(max-width: 600px) and (orientation: portrait)" srcset="img/zevs-popup1-mob.png")
-          source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/zevs-popup1-mob.png")
-          source(media="(min-width: 601px) and (max-width: 1024px) and (orientation: portrait)" srcset="img/zevs-popup1-desc.png")
-          source(media="(min-width: 601px) and (orientation: landscape)" srcset="img/zevs-popup1-desc.png")
-          img(src="img/zevs-popup1-desc.png" alt="Favbet")
       .bonus__firstWin-info
-        .bonus__firstWin-title
-          .bonus__firstWin-title-top Ти виграв можливість
-          .bonus__firstWin-title-bottom отримати
-        .bonus__firstWin-win 100 FS
-        .bonus__firstWin-text Залишилась ще #[span 1] спроба
-        .bonus__firstWin-btn #[span Спробуй ще]
-    .bonus__secondWin.hide
-      .bonus__secondWin-image
-        .bonus__secondWin-bubble #[span Вiтаю!] #[br] Ти - легенда античного свiту.
-        picture.land__firstWin-main
-          source(media="(max-width: 600px) and (orientation: portrait)" srcset="img/zevs-popup2-mob.png")
-          source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/zevs-popup2-mob.png")
-          source(media="(min-width: 601px) and (max-width: 1024px) and (orientation: portrait)" srcset="img/zevs-popup2-desc.png")
-          source(media="(min-width: 601px) and (orientation: landscape)" srcset="img/zevs-popup2-desc.png")
-          img(src="img/zevs-popup2-desc.png" alt="Favbet")
+        .bonus__firstWin-image
+          .bonus__firstWin-bubble
+            .bonus__firstWin-bubble-top Це не все!
+            .bonus__firstWin-bubble-center лови
+            .bonus__firstWin-bubble-bottom промокод
+          picture
+            source(media="(max-width: 600px) and (orientation: portrait)" srcset="img/coala-popup1-mob.png")
+            source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/coala-popup1-mob.png")
+            source(media="(min-width: 601px) and (max-width: 1024px) and (orientation: portrait)" srcset="img/coala-popup1-desc.png")
+            source(media="(min-width: 601px) and (orientation: landscape)" srcset="img/coala-popup1-desc.png")
+            img(src="img/coala-popup1-desc.png" alt="Favbet")
+        .bonus__firstWin-info-wrap
+          .bonus__firstWin-title
+            .bonus__firstWin-title-top Ти виграв можливість
+            .bonus__firstWin-title-bottom отримати
+          .bonus__firstWin-win
+          .bonus__firstWin-btn #[span Більше бонусів*]
+    .bonus__secondWin._opacity
       .bonus__secondWin-info
-        .bonus__secondWin-title
-          .bonus__firstWin-title-top Ти виграв можливість
-          .bonus__firstWin-title-bottom отримати
-        .bonus__secondWin-win
-          .bonus__secondWin-win-item до 4500
-          .bonus__secondWin-win-mon <img src='img/money.svg' alt='money' />
-          .bonus__secondWin-win-item +
-          .bonus__secondWin-win-item 100 fs
-        .bonus__secondWin-text Реєструйся, бонус та фріспіни на твоєму рахунку
-        a(href='https://www.favbet.ua/uk/promos/promo/new_welcome/' target="_blank").bonus__secondWin-more Правила та умови
-        a(href='https://tds.favbet.partners').bonus__secondWin-btn #[span Забирай бонус]
+        .bonus__secondWin-image
+          .bonus__secondWin-bubble
+            .bonus__secondWin-bubble-top Забирай
+            .bonus__secondWin-bubble-bottom бонус
+          picture
+            source(media="(max-width: 600px) and (orientation: portrait)" srcset="img/coala-popup2-mob.png")
+            source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/coala-popup2-mob.png")
+            source(media="(min-width: 601px) and (max-width: 1024px) and (orientation: portrait)" srcset="img/coala-popup2-desc.png")
+            source(media="(min-width: 601px) and (orientation: landscape)" srcset="img/coala-popup2-desc.png")
+            img(src="img/coala-popup2-desc.png" alt="Favbet")
+        .bonus__secondWin-info-wrap
+          .bonus__secondWin-title
+            .bonus__secondWin-title-top Вводь промокод
+            .bonus__secondWin-title-bottom під час реєстрації
+          .bonus__secondWin-code-wrap
+            .bonus__secondWin-code-fav
+            .bonus__secondWin-code-btn
+          .bonus__secondWin-text та отримуй
+          .bonus__secondWin-win
+          .bonus__secondWin-text в SUN of EGYPT 3
+          .bonus__secondWin-info Промокод доступний тільки для нових клієнтів. #[br]Деталі на сайті <a href='#'>favbet.ua</a> в особистому кабінеті
+          a(href='#').bonus__secondWin-btn #[span Забрати бонус]
   .bonus__main
     .bonus__main-logo
+    .bonus__main-pyramid
+      picture
+        source(media="(max-width: 600px) and (orientation: portrait)" srcset="img/pyramid-mob.png")
+        source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/pyramid-landscape.png")
+        source(media="(min-width: 601px) and (max-width: 1024px) and (orientation: portrait)" srcset="img/pyramid-tab.png")
+        source(media="(min-width: 601px) and (orientation: landscape)" srcset="img/pyramid-desc.png")
+        img(src="img/pyramid-desc.png" alt="Favbet")
+    .bonus__main-light
+      .bonus__main-lightOne
+      .bonus__main-lightTwo
+      .bonus__main-lightFourth
+      .bonus__main-lightFive
+      .bonus__main-lightSix
+      .bonus__main-lightBig
+    .bonus__main-salut
+      .bonus__main-salutOne
+      .bonus__main-salutTwo
+      .bonus__main-salutThree
+      .bonus__main-salutFourth
+      .bonus__main-salutFive
     .bonus__main-txt
-      .bonus__main-txt-top Кинь виклик
-      .bonus__main-txt-center богам та забери
-      .bonus__main-txt-bottom бонус
-    .bonus__main-image
-      .bonus__main-bubble Маeш двi спроби, смертний
-      picture.land__image-main
-        source(media="(max-width: 600px) and (orientation: portrait)" srcset="img/zevs-mob.png")
-        source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/zevs-mob.png")
-        source(media="(min-width: 601px) and (max-width: 1024px) and (orientation: portrait)" srcset="img/zevs-desc.png")
-        source(media="(min-width: 601px) and (orientation: landscape)" srcset="img/zevs-desc.png")
-        img(src="img/zevs-desc.png" alt="Favbet")
+      picture
+        source(media="(max-width: 600px) and (orientation: portrait)" srcset="img/text-mob.png")
+        source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/text-mob.png")
+        source(media="(min-width: 601px) and (max-width: 1024px) and (orientation: portrait)" srcset="img/text-tab.png")
+        source(media="(min-width: 601px) and (orientation: landscape)" srcset="img/text-desc.png")
+        img(src="img/text-desc.png" alt="Favbet")
     .bonus__main-wrapper
       .bonus__main-wheel
         .bonus__main-wheel-wrap
@@ -58,13 +82,18 @@
           .bonus__main-wheel-frame
           .bonus__main-wheel-reel.position
           .bonus__main-wheel-light.position
-  .bonus__lighting-one
-  .bonus__lighting-two
-  .bonus__pilars-one
-  .bonus__pilars-two
+    .bonus__main-coala
+      .bonus__main-coala-wrap
+        .bonus__main-coala-bubbleWrap
+          .bonus__main-coala-bubbleOne
+        picture
+          source(media="(max-width: 600px) and (orientation: portrait)" srcset="img/coala-mob.png")
+          source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/coala-mob.png")
+          source(media="(min-width: 601px) and (max-width: 1024px) and (orientation: portrait)" srcset="img/coala-tab.png")
+          source(media="(min-width: 601px) and (orientation: landscape)" srcset="img/coala-desc.png")
+          img(src="img/coala-desc.png" alt="Favbet")
 
 .bonus__info
-  .bonus__info-top "Caesar Dressing", (c) 2020 by Denis Ignatov (<a href="https://mutno.me/fonts">https://mutno.me/fonts</a>)
   .bonus__info-bottom * Під бонусом розуміється можливість отримати приз в рамках Акції “Вітальний бонус”. Деталі на сайті <a href="https://www.favbet.ua/uk/promos/promo/new_welcome/">favbet.ua</a>. Період Акції з 01.02.2023 по 31.12.2023 року. Бонус доступний тільки для нових клієнтів.
 
 .bonus__footer
