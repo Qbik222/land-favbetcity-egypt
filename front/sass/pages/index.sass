@@ -1,0 +1,848 @@
+$blue: #000055
+$magenta: #ff267e
+$green: #05C489
+$green-hover: #09B47F
+$grey: #EDEDED
+$white: #FFFFFF
+$text: #292929
+
+$font-suisse-reg: SuisseIntl-Regular, sans-serif //400
+$font-caesar: CaesarDressingCyrillic, sans-serif
+$font-din: DINPro-CondLight, sans-serif
+
+body
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+  img
+    max-width: 100%
+    height: auto
+
+.position
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  margin: auto
+
+.bonus
+  width: 100%
+  height: 100%
+  overflow: hidden
+  position: relative
+  @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+    background: #005 url('../img/bg-desc.jpg') no-repeat 50% 0/cover
+  @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+    background: #005  url('../img/bg-tab.jpg') no-repeat 50% 0/cover
+  @media screen and (max-width: 600px) and (orientation: portrait)
+    background: #005 url("../img/bg-mob.jpg") no-repeat 50% 0%/cover
+  @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+    background: #005 url("../img/bg-landscape.jpg") no-repeat 50% 0/cover
+  &__overlay
+    background: rgba(12, 24, 37, 0.8)
+    display: flex
+    justify-content: center
+    align-items: center
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 10
+    transition: opacity 1s linear, visibility .5s linear
+  &__firstWin,
+  &__secondWin
+    &-info
+      margin-top: 200px
+      padding-top: 90px
+      width: 894px
+      min-width: 480px
+      height: 500px
+      @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+        background: url('../img/popup-bg.png') no-repeat 50% 0/contain
+      @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        background:  url('../img/popup-bg.png') no-repeat 50% 0/contain
+      @media screen and (max-width: 600px) and (orientation: portrait)
+        background: url("../img/popup-bg-mob.png") no-repeat 50% 0%/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/popup-bg-mob.png") no-repeat 50% 0/contain
+      transform: scale(1)
+      position: relative
+      display: flex
+      flex-direction: column
+      align-items: center
+      &::before
+        content: ''
+        position: absolute
+        left: 50%
+        top: -35px
+        transform: translateX(-50%)
+        width: 84px
+        height: 114px
+        background: url('../img/plush.png') no-repeat 50% 0/contain
+    &-image
+      top: 0
+      left: 52%
+      transform: translateX(-50%)
+      position: absolute
+      width: 610px
+    &-bubble
+      position: absolute
+      padding: 30px 16px 5px 5px
+      top: 20px
+      left: -20px
+      width: 195px
+      height: 173px
+      font-family: $font-caesar
+      font-size: 32px
+      line-height: 34px
+      color: #000055
+      letter-spacing: 0.03em
+      text-align: center
+      background: url('../img/bubble-popup.png') no-repeat 50% 0/contain
+    &-title
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin: 0 0 10px 0
+      &-top
+        font-family: $font-caesar
+        white-space: nowrap
+        font-size: 36px
+        line-height: 40px
+        letter-spacing: 0.03em
+        background: linear-gradient(180deg, #4E1802 35%, #4E1C00 58.49%, #EF631A 71.67%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        position: relative
+        z-index: 3
+        top: 10px
+        padding: 1px
+        clip-path: inset(1px)
+        &::before
+          content: 'Ти виграв можливість'
+          position: absolute
+          z-index: 1
+          left: 0
+          top: -3px
+          font-family: $font-caesar
+          font-size: 36px
+          line-height: 40px
+          letter-spacing: 0.03em
+          background: linear-gradient(180deg, #FFF325 35%, #F89E0A 58.49%, #FFF325 71.67%)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+          background-clip: text
+          text-fill-color: transparent
+          -webkit-text-stroke: 1px rgba(255, 255, 255, 1)
+          padding: 1px
+          clip-path: inset(1px)
+      &-bottom
+        font-family: $font-caesar
+        white-space: nowrap
+        font-size: 36px
+        line-height: 40px
+        letter-spacing: 0.03em
+        background: linear-gradient(180deg, #4E1802 35%, #4E1C00 58.49%, #EF631A 71.67%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        position: relative
+        z-index: 3
+        top: 10px
+        padding: 1px
+        clip-path: inset(1px)
+        &::before
+          text-align: center
+          content: 'отримати'
+          position: absolute
+          z-index: 1
+          left: 0
+          top: -3px
+          font-family: $font-caesar
+          font-size: 36px
+          line-height: 40px
+          letter-spacing: 0.03em
+          background: linear-gradient(180deg, #FFF325 35%, #F89E0A 58.49%, #FFF325 71.67%)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+          background-clip: text
+          text-fill-color: transparent
+          -webkit-text-stroke: 1px rgba(255, 255, 255, 1)
+          padding: 1px
+          clip-path: inset(1px)
+    &-win
+      margin: 0 0 40px 0
+      text-align: center
+      font-family: $font-caesar
+      white-space: nowrap
+      font-size: 96px
+      line-height: 98px
+      letter-spacing: 0.03em
+      background: linear-gradient(180deg, #4E1802 35%, #4E1C00 58.49%, #EF631A 71.67%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-clip: text
+      text-fill-color: transparent
+      position: relative
+      z-index: 3
+      top: 10px
+      padding: 1px
+      clip-path: inset(1px)
+      &::before
+        text-align: center
+        content: '100 FS'
+        position: absolute
+        z-index: 1
+        left: 50%
+        transform: translateX(-50%)
+        top: -5px
+        font-family: $font-caesar
+        font-size: 96px
+        line-height: 98px
+        letter-spacing: 0.03em
+        background: linear-gradient(180deg, #FFF325 35%, #F89E0A 58.49%, #FFF325 71.67%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 1)
+        padding: 1px
+        clip-path: inset(1px)
+    &-text
+      font-family: $font-suisse-reg
+      font-size: 16px
+      line-height: 22px
+      letter-spacing: 0.03em
+      color: #EDEDED
+      text-align: center
+    &-btn
+      display: flex
+      align-items: center
+      justify-content: center
+      white-space: nowrap
+      cursor: pointer
+      width: 304px
+      height: 120px
+      background: url("../img/btn-normal.png") no-repeat 0 0/contain
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      bottom: -1px
+      transition: background .3s ease
+      &:hover
+        background: url("../img/btn-hover.png") no-repeat 0 0/contain
+      span
+        margin-top: -15px
+        font-family: $font-caesar
+        white-space: nowrap
+        font-size: 36px
+        line-height: 40px
+        letter-spacing: 0.03em
+        background: linear-gradient(180deg, #4E1802 35%, #4E1C00 58.49%, #EF631A 71.67%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        position: relative
+        z-index: 3
+        top: 10px
+        padding: 1px
+        clip-path: inset(1px)
+        &::before
+          text-align: center
+          content: 'Спробуй ще'
+          position: absolute
+          z-index: 1
+          left: 50%
+          transform: translateX(-50%)
+          top: -5px
+          font-family: $font-caesar
+          font-size: 36px
+          line-height: 40px
+          letter-spacing: 0.03em
+          background: linear-gradient(180deg, #FFF325 35%, #F89E0A 58.49%, #FFF325 71.67%)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+          background-clip: text
+          text-fill-color: transparent
+          -webkit-text-stroke: 1px rgba(255, 255, 255, 1)
+          padding: 1px
+          clip-path: inset(1px)
+
+  &__secondWin
+    &-text
+      display: none
+    &-info
+      padding-top: 119px
+    &-image
+      width: 536px
+    &-bubble
+      padding: 27px 16px 5px 5px
+      font-size: 23px
+      line-height: 26px
+      width: 196px
+      height: 187px
+      left: -50px
+      span
+        font-size: 31px
+        line-height: 18px
+    &-win
+      font-size: 48px
+      line-height: 50px
+      display: flex
+      align-items: center
+      &::before
+        content: none
+      &-mon
+        margin: 0 20px 0 0
+        position: relative
+        top: 14px
+      &-item
+        font-family: $font-caesar
+        white-space: nowrap
+        font-size: 48px
+        line-height: 50px
+        letter-spacing: 0.03em
+        background: linear-gradient(180deg, #4E1802 35%, #4E1C00 58.49%, #EF631A 71.67%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        position: relative
+        z-index: 3
+        top: 10px
+        padding: 1px
+        clip-path: inset(1px)
+        &::before
+          position: absolute
+          z-index: 1
+          left: 0
+          top: -5px
+          font-family: $font-caesar
+          font-size: 48px
+          line-height: 50px
+          letter-spacing: 0.03em
+          background: linear-gradient(180deg, #FFF325 35%, #F89E0A 58.49%, #FFF325 71.67%)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+          background-clip: text
+          text-fill-color: transparent
+          -webkit-text-stroke: 1px rgba(255, 255, 255, 1)
+          padding: 1px
+          clip-path: inset(1px)
+        &:nth-child(1)
+          margin: 0 10px 0 0
+        &:nth-child(3)
+          margin: 0 20px 0 0
+        &:nth-child(1)::before
+          content: 'до 4500'
+        &:nth-child(3)::before
+          content: '+'
+        &:nth-child(4)::before
+          content: '100 fs'
+
+    &-text
+      margin: 0 0 5px 0
+    &-more
+      font-family: $font-suisse-reg
+      font-size: 16px
+      line-height: 21px
+      text-decoration-line: underline
+      color: #FFFFFF
+      &:hover
+        text-decoration: none
+    &-btn
+      span
+        &::before
+          content: 'Забирай бонус'
+
+  &__pilars
+    &-one
+      position: absolute
+      width: 24vh
+      height: 85vh
+      bottom: 0
+      left: -130px
+      background:  url("../img/pillars1-desc.png") no-repeat 50% 0/contain
+    &-two
+      position: absolute
+      width: 78vh
+      height: 78vh
+      bottom: 0
+      right: -310px
+      @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+        background:  url('../img/pillars2-desc.png') no-repeat 50% 0/contain
+      @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        background:   url('../img/pillars2-desc.png') no-repeat 50% 0/contain
+      @media screen and (max-width: 600px) and (orientation: portrait)
+        background:  url("../img/pillars2-mob.png") no-repeat 50% 0%/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background:  url("../img/pillars2-mob.png") no-repeat 50% 0/contain
+  &__lighting
+    &-one
+      animation: 2s infinite bulbs-opacity ease
+      position: absolute
+      width: 64vh
+      height: 75vh
+      top: 10px
+      left: -10px
+      @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+        background:  url('../img/lighting1-desc.png') no-repeat 50% 0/contain
+      @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        background:   url('../img/lighting1-desc.png') no-repeat 50% 0/contain
+      @media screen and (max-width: 600px) and (orientation: portrait)
+        background:  url("../img/lighting1-mob.png") no-repeat 50% 0%/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background:  url("../img/lighting1-mob.png") no-repeat 50% 0/contain
+    &-two
+      animation: 3s infinite bulbs-opacity ease
+      opacity: 0
+      animation-delay: 1s
+      position: absolute
+      width: 73vh
+      height: 55vh
+      bottom: -74px
+      left: 38%
+      transform: translateX(-50%)
+      @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+        background:  url('../img/lighting2-desc.png') no-repeat 50% 0/contain
+      @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        background:   url('../img/lighting2-desc.png') no-repeat 50% 0/contain
+      @media screen and (max-width: 600px) and (orientation: portrait)
+        background:  url("../img/lighting2-mob.png") no-repeat 50% 0%/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background:  url("../img/lighting2-mob.png") no-repeat 50% 0/contain
+  &__main
+    padding: 60px 55px 0 60px
+    height: 100%
+    width: 100%
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &::before
+      pointer-events: none
+      content: ''
+      position: absolute
+      z-index: 4
+      width: 100%
+      height: 250px
+      bottom: 0
+      left: 0
+      background: linear-gradient(180deg, rgba(8, 7, 68, 0) 0%, #080744 100%)
+    &-logo
+      background: url("../img/logo.svg") no-repeat 0 0/contain
+      width: 402px
+      height: 154px
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+    &-txt
+      margin-top: -140px
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      position: relative
+      z-index: 5
+      &::after
+        content: '*'
+        font-family: $font-suisse-reg
+        position: absolute
+        top: 173px
+        right: -46px
+        font-size: 48px
+        line-height: 62px
+        background: linear-gradient(180deg, #FFF325 35%, #F89E0A 58.49%, #FFF325 71.67%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        padding: 1px
+        clip-path: inset(1px)
+      &-top
+        font-family: $font-caesar
+        white-space: nowrap
+        font-size: 75px
+        line-height: 82px
+        letter-spacing: 0.03em
+        background: linear-gradient(180deg, #4E1802 35%, #4E1C00 58.49%, #EF631A 71.67%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        position: relative
+        z-index: 3
+        top: 10px
+        padding: 1px
+        clip-path: inset(1px)
+        &::before
+          content: 'Кинь виклик'
+          position: absolute
+          z-index: 1
+          left: 0
+          top: -5px
+          font-family: $font-caesar
+          font-size: 75px
+          line-height: 82px
+          letter-spacing: 0.03em
+          background: linear-gradient(180deg, #FFF325 35%, #F89E0A 58.49%, #FFF325 71.67%)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+          background-clip: text
+          text-fill-color: transparent
+          -webkit-text-stroke: 1px rgba(255, 255, 255, 1)
+          padding: 1px
+          clip-path: inset(1px)
+      &-center
+        white-space: nowrap
+        font-family: $font-caesar
+        margin: 0 0 8px 0
+        font-size: 75px
+        line-height: 82px
+        letter-spacing: 0.03em
+        background: linear-gradient(180deg, #4E1802 35%, #4E1C00 58.49%, #EF631A 71.67%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        position: relative
+        z-index: 3
+        top: 10px
+        left: 60px
+        padding: 1px
+        clip-path: inset(1px)
+        &::before
+          content: 'богам та забери'
+          position: absolute
+          z-index: 1
+          left: 0
+          top: -5px
+          font-family: $font-caesar
+          font-size: 75px
+          line-height: 82px
+          letter-spacing: 0.03em
+          background: linear-gradient(180deg, #FFF325 35%, #F89E0A 58.49%, #FFF325 71.67%)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+          background-clip: text
+          text-fill-color: transparent
+          -webkit-text-stroke: 1px rgba(255, 255, 255, 1)
+          padding: 1px
+          clip-path: inset(1px)
+      &-bottom
+        margin-top: -10px
+        font-family: $font-caesar
+        font-size: 120px
+        line-height: 120px
+        letter-spacing: 0.03em
+        background: linear-gradient(180deg, #4E1802 35%, #4E1C00 58.49%, #EF631A 71.67%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        position: relative
+        z-index: 3
+        top: 10px
+        left: 280px
+        padding: 1px
+        clip-path: inset(1px)
+
+        &::before
+          content: 'бонус'
+          position: absolute
+          z-index: 1
+          left: 0
+          top: -5px
+          font-family: $font-caesar
+          font-size: 120px
+          line-height: 120px
+          letter-spacing: 0.03em
+          background: linear-gradient(180deg, #FFF325 35%, #F89E0A 58.49%, #FFF325 71.67%)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+          background-clip: text
+          text-fill-color: transparent
+          -webkit-text-stroke: 1px rgba(255, 255, 255, 1)
+          padding: 1px
+          clip-path: inset(1px)
+    &-bubble
+      position: absolute
+      right: 100px
+      top: -20px
+      transform: scale(1.15)
+      width: 137px
+      height: 123px
+      padding: 20px 24px 21px 10px
+      background:  url("../img/bubble-desc.png") no-repeat 50% 0/contain
+      font-family: $font-caesar
+      font-size: 15px
+      line-height: 16px
+      text-align: center
+      letter-spacing: 0.03em
+      color: #000055
+    &-image
+      animation: 3s infinite zevs ease
+      height: 95vh
+      position: absolute
+      width: 54vh
+      top: 75px
+      left: 49%
+      transform: translateX(-50%)
+      z-index: 1
+      picture
+        height: 100%
+        position: absolute
+        top: 0
+
+    &-wrapper
+      position: relative
+      bottom: -220px
+      transform-origin: bottom center
+      transform: scale(1.1)
+      z-index: 2
+      display: flex
+      align-items: flex-end
+    &-wheel
+      position: relative
+      &-wrap
+        position: relative
+      &-btn
+        width: 300px
+        height: 300px
+        z-index: 5
+        top: -337px
+        cursor: pointer
+        @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+          background: url("../img/wheel-btn.png") no-repeat 0 0/contain
+        @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+          background: url("../img/wheel-btn.png") no-repeat 0 0/contain
+        @media screen and (max-width: 550px) and (orientation: portrait)
+          background: url("../img/wheel-btn-mob.png") no-repeat 0 0/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/wheel-btn-mob.png") no-repeat 0 0/contain
+      &-frame
+        width: 678px
+        height: 1104px
+        position: relative
+        margin: auto
+        z-index: 3
+        @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+          background: url("../img/wheel-frame.png") no-repeat 0 0/contain
+        @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+          background: url("../img/wheel-frame.png") no-repeat 0 0/contain
+        @media screen and (max-width: 550px) and (orientation: portrait)
+          background: url("../img/wheel-frame-mob-2.png") no-repeat 0 0/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/wheel-frame-mob-2.png") no-repeat 0 0/contain
+      &-reel
+        width: 640px
+        height: 640px
+        top: 74px
+        left: -25px
+        bottom: auto
+        z-index: 2
+        @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+          background: url("../img/wheel-reel.png") no-repeat 0 0/contain
+        @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+          background: url("../img/wheel-reel.png") no-repeat 0 0/contain
+        @media screen and (max-width: 550px) and (orientation: portrait)
+          background: url("../img/wheel-reel-mob-2.png") no-repeat 0 0/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/wheel-reel-mob-2.png") no-repeat 0 0/contain
+      &-light
+        pointer-events: none
+        width: 810px
+        height: 810px
+        left: 50%
+        transform: translateX(-50%)
+        top: -300px
+        z-index: 1
+        animation: 1.8s infinite lamps-light ease-in-out
+        @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+          background: url("../img/wheel-light.svg") no-repeat 50% 50%/contain
+        @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+          background: url("../img/wheel-light.svg") no-repeat 50% 50%/contain
+        @media screen and (max-width: 550px) and (orientation: portrait)
+          background: url("../img/wheel-light-mob.svg") no-repeat 50% 50%/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/wheel-light-mob.svg") no-repeat 50% 50%/contain
+  &__info
+    position: absolute
+    bottom: 88px
+    left: 35px
+    z-index: 7
+    &-top
+      font-family: $font-suisse-reg
+      font-size: 8px
+      line-height: 22px
+      color: rgba(255, 255, 255, 0.2)
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25)
+      a
+        font-family: $font-suisse-reg
+        color: rgba(255, 255, 255, 0.2)
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25)
+    &-bottom
+      font-family: $font-suisse-reg
+      color: rgba(255, 255, 255, 0.8)
+      font-size: 14px
+      line-height: 22px
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25)
+      a
+        text-decoration: underline
+        color: rgba(255, 255, 255, 0.8)
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25)
+        &:hover
+          text-decoration: none
+  &__footer
+    position: absolute
+    z-index: 5
+    bottom: 0
+    left: 0
+    right: 0
+    height: 83px
+    background: $blue
+    padding: 0 35px
+    display: flex
+    align-items: center
+    overflow: hidden
+    &-row
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &-text
+      max-width: 982px
+      font-family: $font-suisse-reg
+      font-size: 14px
+      line-height: 22px
+      color: rgba(255, 255, 255, 0.8)
+      margin: 0 20px 0 0
+    &-info
+      display: flex
+      align-items: center
+      &-licensed
+        display: flex
+        align-items: center
+        margin: 0 35px 0 0
+        &-img
+          &:not(:last-child)
+            margin: 0 17px 0 0
+      &-buttons
+        display: flex
+        align-items: stretch
+        &-apple
+          width: 114px
+          margin: 0 10px 0 0
+        &-google
+          width: 127px
+  &__legal
+    //display: flex
+    display: none
+    background: $grey
+    font-family: $font-din
+    font-size: 2.55vw
+    color: #000
+    height: 75px
+    justify-content: center
+    align-items: center
+    padding-top: 3px
+    z-index: 5
+  &__legal-desc
+    padding: 0 23px
+    z-index: 5
+    width: 100%
+    height: 170px
+    background: #ffffff
+    &-wrap
+      width: 100%
+      height: 100%
+      background: url("../img/warning.svg") no-repeat 50% center/contain
+
+
+.audio
+  display: none
+.pulse-btn
+  animation: 1.2s infinite pulse-btn ease-in-out
+
+.land__image-main
+  animation: 1.7s infinite zevs-drop ease
+
+@keyframes zevs-drop
+  0%
+    filter: drop-shadow(0 0 0.15rem rgb(182, 225, 246))
+  50%
+    filter: drop-shadow(0 0 1.25rem rgb(182, 225, 246))
+  100%
+    filter: drop-shadow(0 0 0.15rem rgb(182, 225, 246))
+
+@keyframes pulse-btn
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.07)
+  100%
+    transform: scale(1)
+
+
+@keyframes bulbs-opacity
+  0%
+    opacity: 0
+  50%
+    opacity: 1
+  100%
+    opacity: 0
+
+@keyframes zevs
+  0%
+    transform: translateX(-50%) translateY(-10px)
+  50%
+    transform: translateX(-50%) translateY(10px)
+  100%
+    transform: translateX(-50%) translateY(-10px)
+
+
+@keyframes lamps-light
+  0%
+    transform: translateX(-50%) scale(1)
+  50%
+    transform: translateX(-50%) scale(1.1)
+  100%
+    transform: translateX(-50%) scale(1)
+
+.reel-rotation-first
+  animation: 6s reel-rotation-first cubic-bezier(.25,.75,.5,1.05) forwards
+
+@keyframes reel-rotation-first
+  0%
+    transform: rotate(0deg)
+  80%
+    transform: rotate(998deg)
+  90%
+    transform: rotate(986deg)
+  100%
+    transform: rotate(992deg)
+
+.reel-rotation-second
+  animation: 6s reel-rotation-second cubic-bezier(.25,.75,.5,1.05) forwards
+
+@keyframes reel-rotation-second
+  0%
+    transform: rotate(992deg)
+  80%
+    transform: rotate(1852deg)
+  90%
+    transform: rotate(1840deg)
+  100%
+    transform: rotate(1846deg)
+
+.hide
+  display: none
+
+.opacity-overlay
+  opacity: 0
+  visibility: hidden
