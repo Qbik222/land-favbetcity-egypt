@@ -18,8 +18,8 @@ const playBtn = document.querySelector('.bonus__main-wheel-btn'),
       btnVolume = document.querySelector('.bonus__music'),
       btnVolumeImg = document.querySelector('.bonus__music-img')
 
-//audioMain.volume = 0.6
-audioMain.volume = 0
+audioMain.volume = 0.6
+
 
 
 btnVolume.addEventListener('click', () => {
