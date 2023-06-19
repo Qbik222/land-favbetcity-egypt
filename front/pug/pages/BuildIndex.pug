@@ -1,8 +1,24 @@
 .bonus
-  .bonus__music
-    img(src='img/sound-off.svg' alt='sound')
+  .bonus__start
+    .bonus__start-logo
+    .bonus__start-wrap
+      .bonus__start-board
+        .bonus__start-board-leg
+        .bonus__start-board-border
+        .bonus__start-board-welcome
+        .bonus__start-board-fav
+        .bonus__start-board-your
+        .bonus__start-board-arrow
+        .bonus__start-board-iconOne
+        .bonus__start-board-iconTwo
+        .bonus__start-board-iconThree
+      .bonus__start-salutOne
+      .bonus__start-salutTwo
+      .bonus__start-salutThree
+      .bonus__start-salutFourth
+  .bonus__music.off
+    img(src='img/sound-off.svg' alt='sound').bonus__music-img
   .bonus__overlay.opacity-overlay
-    .coin-container(id='coin-container')
     .bonus__firstWin.hide
       .bonus__firstWin-info
         .bonus__firstWin-image
@@ -44,14 +60,14 @@
           .bonus__secondWin-text та отримуй
           .bonus__secondWin-win
           .bonus__secondWin-text в SUN of EGYPT 3
-          .bonus__secondWin-info Промокод доступний тільки для нових клієнтів. #[br]Деталі на сайті <a href='#'>favbet.ua</a> в особистому кабінеті
+          .bonus__secondWin-about Промокод доступний тільки для нових клієнтів. #[br]Деталі на сайті <a href='#'>favbet.ua</a> в особистому кабінеті
           a(href='#').bonus__secondWin-btn #[span Забрати бонус]
   .bonus__main
     .bonus__main-logo
     .bonus__main-pyramid
       picture
         source(media="(max-width: 600px) and (orientation: portrait)" srcset="img/pyramid-mob.png")
-        source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/pyramid-landscape.png")
+        source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/favicon.ico")
         source(media="(min-width: 601px) and (max-width: 1024px) and (orientation: portrait)" srcset="img/pyramid-tab.png")
         source(media="(min-width: 601px) and (orientation: landscape)" srcset="img/pyramid-desc.png")
         img(src="img/pyramid-desc.png" alt="Favbet")
@@ -93,8 +109,7 @@
           source(media="(min-width: 601px) and (orientation: landscape)" srcset="img/coala-desc.png")
           img(src="img/coala-desc.png" alt="Favbet")
 
-.bonus__info
-  .bonus__info-bottom * Під бонусом розуміється можливість отримати приз в рамках Акції “Вітальний бонус”. Деталі на сайті <a href="https://www.favbet.ua/uk/promos/promo/new_welcome/">favbet.ua</a>. Період Акції з 01.02.2023 по 31.12.2023 року. Бонус доступний тільки для нових клієнтів.
+.bonus__text * Під бонусом розуміється можливість отримати приз в рамках Акції “Вітальний бонус”. Деталі на сайті <a href="https://www.favbet.ua/uk/promos/promo/new_welcome/">favbet.ua</a>. Період Акції з 01.02.2023 по 31.12.2023 року. Бонус доступний тільки для нових клієнтів.
 
 .bonus__footer
   .bonus__footer-row
@@ -115,6 +130,10 @@
 .bonus__legal УЧАСТЬ В АЗАРТНИХ ІГРАХ МОЖЕ ВИКЛИКАТИ ІГРОВУ ЗАЛЕЖНІСТЬ. ДОТРИМУЙТЕСЯ ПРАВИЛ (ПРИНЦИПІВ) ВІДПОВІДАЛЬНОЇ ГРИ
 .bonus__legal-desc
   .bonus__legal-desc-wrap
+audio(src='sounds/coints.wav').audio.audio-coins
+audio(src='sounds/firework.mp3' loop).audio.audio-firework
+audio(src='sounds/main-music.mp3' loop).audio.audio-main
+audio(src='sounds/wheel.mp3').audio.audio-wheel
 
 
 

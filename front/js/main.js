@@ -8,8 +8,51 @@ const playBtn = document.querySelector('.bonus__main-wheel-btn'),
       popupSecond = document.querySelector('.bonus__secondWin'),
       overflow = document.querySelector('body'),
       wrapper = document.querySelector('.bonus'),
-      copyBtn = document.querySelector('.bonus__secondWin-code-btn')
+      copyBtn = document.querySelector('.bonus__secondWin-code-btn'),
+      bonusStart = document.querySelector('.bonus__start'),
+      bonusText = document.querySelector('.bonus__text'),
+      audioCoin = document.querySelector('.audio-coins'),
+      audioFirework = document.querySelector('.audio-firework'),
+      audioMain = document.querySelector('.audio-main'),
+      audioWheel = document.querySelector('.audio-wheel'),
+      btnVolume = document.querySelector('.bonus__music'),
+      btnVolumeImg = document.querySelector('.bonus__music-img')
 
+//audioMain.volume = 0.6
+audioMain.volume = 0
+
+
+btnVolume.addEventListener('click', () => {
+    if(btnVolume.classList.contains('off')){
+        btnVolume.classList.remove('off')
+        btnVolume.classList.add('on')
+        audioMain.play()
+        audioFirework.play()
+        btnVolumeImg.setAttribute('src', 'img/sound-on.svg')
+
+    } else {
+        btnVolume.classList.remove('on')
+        btnVolume.classList.add('off')
+        audioMain.pause()
+        audioMain.currentTime = 0;
+        audioFirework.pause()
+        audioFirework.currentTime = 0;
+        audioWheel.pause()
+        audioWheel.currentTime = 0;
+        audioCoin.pause()
+        audioCoin.currentTime = 0;
+        btnVolumeImg.setAttribute('src', 'img/sound-off.svg')
+    }
+})
+
+setTimeout(function (){
+    bonusStart.classList.add('_active')
+    main.classList.add('_active')
+    setTimeout(function (){
+        bonusText.classList.add('_visible')
+    }, 1200)
+
+}, 3500);
 
 copyBtn.addEventListener('click', () => {
     copyBtn.classList.add('_copy')
@@ -32,6 +75,10 @@ playBtn.addEventListener('click', () => {
 })
 
 function runFirstRotation() {
+    btnVolumeImg.setAttribute('src', 'img/sound-on.svg')
+    audioMain.play()
+    audioFirework.play()
+    audioWheel.play()
     wheel.classList.add('reel-rotation-first')
     playBtn.classList.remove('pulse-btn')
     playBtn.style.cursor = 'default'
@@ -43,6 +90,7 @@ function runFirstRotation() {
 }
 
 function doAfterFirstRotation() {
+    audioCoin.play()
     wheel.style.transform = 'rotate(992deg)'
     wheel.classList.remove('reel-rotation-first')
     displayPopup(popupFirst)

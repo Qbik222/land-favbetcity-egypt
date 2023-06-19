@@ -28,6 +28,237 @@ body
 
 
 .bonus
+  &__start
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    transition: transform 1.5s ease, opacity 2s ease
+    &._active
+      transform: scale(1.1)
+      opacity: 0
+    &-logo
+      width: 403px
+      height: 133px
+      background: url("../img/logo.svg") no-repeat 0 0/contain
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 5
+    &::before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      animation: bg-start 8s ease
+      @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+        background: #005 url('../img/bg-desc-start.jpg') no-repeat 50% 0/cover
+      @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        background: #005  url('../img/bg-tab-start.jpg') no-repeat 50% 0/cover
+      @media screen and (max-width: 600px) and (orientation: portrait)
+        background: #005 url("../img/bg-mob-start.jpg") no-repeat 50% 0%/cover
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: #005 url("../img/bg-landscape-start.jpg") no-repeat 50% 0/cover
+    &-wrap
+      position: absolute
+      width: 720px
+      bottom: 70px
+      left: 50%
+      transform: translateX(-50%) scale(1.3)
+    &-board
+      position: relative
+      width: 720px
+      height: 605px
+      z-index: 4
+      &-leg
+        width: 720px
+        height: 605px
+        background: url("../img/leg-desk.svg") no-repeat 50% 0/contain
+        @media screen and (max-width: 600px) and (orientation: portrait)
+          background: url("../img/leg-mob.svg") no-repeat 50% 0/contain
+      &-border
+        position: absolute
+        top: -91px
+        left: 51.1%
+        transform: translateX(-50%)
+        width: 110.6%
+        height: 540px
+        @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+          background: url('../img/border-desk.png') no-repeat 50% 0/contain
+        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+          background:  url('../img/border-desk.png') no-repeat 50% 0/contain
+        @media screen and (max-width: 600px) and (orientation: portrait)
+          background: url("../img/border-mob.png") no-repeat 50% 0%/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/border-mob.png") no-repeat 50% 0/contain
+        animation: border-opacity 1s ease
+      &-welcome
+        position: absolute
+        top: -110px
+        left: 50.4%
+        transform: translateX(-50%)
+        width: 110.6%
+        height: 540px
+        @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+          background: url('../img/welcome-desk.png') no-repeat 50% 0/contain
+        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+          background:  url('../img/welcome-desk.png') no-repeat 50% 0/contain
+        @media screen and (max-width: 600px) and (orientation: portrait)
+          background: url("../img/welcome-mob.png") no-repeat 50% 0%/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/welcome-mob.png") no-repeat 50% 0/contain
+        opacity: 0
+        animation: welcome-opacity .5s ease forwards
+        animation-delay: .5s
+      &-fav
+        position: absolute
+        top: 14px
+        left: 49.8%
+        transform: translateX(-50%)
+        width: 125.3%
+        height: 540px
+        @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+          background: url('../img/fav-desk.png') no-repeat 50% 0/contain
+        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+          background:  url('../img/fav-desk.png') no-repeat 50% 0/contain
+        @media screen and (max-width: 600px) and (orientation: portrait)
+          background: url("../img/fav-mob.png") no-repeat 50% 0%/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/fav-mob.png") no-repeat 50% 0/contain
+        opacity: 0
+        animation: fav-opacity .5s ease forwards
+        animation-delay: 1.1s
+      &-your
+        position: absolute
+        top: 48px
+        left: 50.55%
+        transform: translateX(-50%)
+        width: 107.3%
+        height: 540px
+        @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+          background: url('../img/your-desk.png') no-repeat 50% 0/contain
+        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+          background:  url('../img/your-desk.png') no-repeat 50% 0/contain
+        @media screen and (max-width: 600px) and (orientation: portrait)
+          background: url("../img/your-mob.png") no-repeat 50% 0%/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/your-mob.png") no-repeat 50% 0/contain
+        opacity: 0
+        animation: border-opacity .4s ease forwards
+        animation-delay: 1.5s
+      &-arrow
+        position: absolute
+        top: 194px
+        left: 42%
+        transform: translateX(-50%)
+        width: 107.3%
+        height: 324px
+        @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+          background: url('../img/arrow-desk.png') no-repeat 50% 0/contain
+        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+          background:  url('../img/arrow-desk.png') no-repeat 50% 0/contain
+        @media screen and (max-width: 600px) and (orientation: portrait)
+          background: url("../img/arrow-mob.png") no-repeat 50% 0%/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/arrow-mob.png") no-repeat 50% 0/contain
+        opacity: 0
+        animation: welcome-opacity .5s ease forwards
+        animation-delay: 1.7s
+      &-iconOne
+        position: absolute
+        bottom: 129px
+        right: 78px
+        width: 312px
+        height: 312px
+        @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+          background: url('../img/icon1-desk.png') no-repeat 50% 0/contain
+        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+          background:  url('../img/icon1-desk.png') no-repeat 50% 0/contain
+        @media screen and (max-width: 600px) and (orientation: portrait)
+          background: url("../img/icon1-mob.png") no-repeat 50% 0%/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/icon1-mob.png") no-repeat 50% 0/contain
+        opacity: 0
+        animation: border-opacity .2s ease forwards
+        animation-delay: 1.9s
+      &-iconTwo
+        position: absolute
+        bottom: 66px
+        right: 77px
+        width: 312px
+        height: 312px
+        @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+          background: url('../img/icon2-desk.png') no-repeat 50% 0/contain
+        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+          background:  url('../img/icon2-desk.png') no-repeat 50% 0/contain
+        @media screen and (max-width: 600px) and (orientation: portrait)
+          background: url("../img/icon2-mob.png") no-repeat 50% 0%/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/icon2-mob.png") no-repeat 50% 0/contain
+        opacity: 0
+        animation: border-opacity .2s ease forwards
+        animation-delay: 2s
+      &-iconThree
+        position: absolute
+        bottom: 4px
+        right: 77px
+        width: 312px
+        height: 312px
+        @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+          background: url('../img/icon3-desk.png') no-repeat 50% 0/contain
+        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+          background:  url('../img/icon3-desk.png') no-repeat 50% 0/contain
+        @media screen and (max-width: 600px) and (orientation: portrait)
+          background: url("../img/icon3-mob.png") no-repeat 50% 0%/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/icon3-mob.png") no-repeat 50% 0/contain
+        opacity: 0
+        animation: border-opacity .2s ease forwards
+        animation-delay: 2.1s
+    &-salutOne
+      top: 20px
+      left: -200px
+      position: absolute
+      width: 234px
+      height: 230px
+      background: url("../img/salut1.svg") no-repeat 0 0/contain
+      opacity: 0
+      animation: salut-one 2s ease forwards
+      animation-delay: 2s
+    &-salutTwo
+      top: -50px
+      left: -70px
+      position: absolute
+      width: 140px
+      height: 140px
+      background: url("../img/salut2.svg") no-repeat 0 0/contain
+      opacity: 0
+      animation: salut-one 2s ease forwards
+      animation-delay: 2.05s
+    &-salutThree
+      top: -100px
+      right: -150px
+      position: absolute
+      width: 240px
+      height: 240px
+      background: url("../img/salut3.svg") no-repeat 0 0/contain
+      opacity: 0
+      animation: salut-one 2s ease forwards
+      animation-delay: 2.05s
+    &-salutFourth
+      top: 90px
+      right: -140px
+      position: absolute
+      width: 100px
+      height: 100px
+      background: url("../img/salut4.svg") no-repeat 0 0/contain
+      opacity: 0
+      animation: salut-one 2s ease forwards
+      animation-delay: 2.1s
+
+
+.bonus
   width: 100%
   height: 100%
   overflow: hidden
@@ -41,7 +272,6 @@ body
   @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
     background: #005 url("../img/bg-landscape.jpg") no-repeat 50% 0/cover
   &__overlay
-
     display: flex
     justify-content: center
     align-items: center
@@ -59,7 +289,14 @@ body
       height: 100%
       top: 0
       left: 0
-      background: url("../img/bg-popup.jpg") no-repeat 50% 0/cover
+      @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+        background: url('../img/bg-popup.jpg') no-repeat 50% 0/cover
+      @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        background:  url('../img/bg-popup.jpg') no-repeat 50% 0/cover
+      @media screen and (max-width: 600px) and (orientation: portrait)
+        background: url("../img/bg-popup-mob.jpg") no-repeat 50% 0%/cover
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/bg-popup-landscape.jpg") no-repeat 50% 0/cover
       animation: 8s infinite pulse-btn ease-in-out
   &__firstWin,
   &__secondWin
@@ -360,7 +597,7 @@ body
       height: 57px
       background: url("../img/spins.png") no-repeat 0 0/contain
       margin: -7px 0 -4px
-    &-info
+    &-about
       display: list-item
       list-style-type: none
       font-family: $font-suisse-reg
@@ -376,6 +613,7 @@ body
         &:hover
           text-decoration: none
   &__music
+    cursor: pointer
     position: absolute
     top: 25px
     right: 65px
@@ -389,6 +627,8 @@ body
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5)
     border-radius: 50%
   &__main
+    visibility: hidden
+    overflow: hidden
     padding: 60px 0px 0 10px
     height: 100%
     width: 100%
@@ -396,6 +636,13 @@ body
     display: flex
     align-items: center
     justify-content: center
+    opacity: 0
+    transform: scale(1.1)
+    transition: transform 1.5s ease, visibility .1s ease, opacity 2s ease
+    &._active
+      visibility: visible
+      transform: scale(1)
+      opacity: 1
     &::before
       content: ''
       position: absolute
@@ -408,7 +655,7 @@ body
       background: rgba(0, 0, 0, 0.2)
     &-logo
       background: url("../img/logo.svg") no-repeat 0 0/contain
-      width: 402px
+      width: 362px
       height: 154px
       position: absolute
       top: 0
@@ -644,48 +891,47 @@ body
           background: url("../img/wheel-reel-mob-2.png") no-repeat 0 0/contain
       &-light
         pointer-events: none
-        width: 810px
-        height: 810px
+        width: 1431px
+        height: 1378px
         left: 50%
         transform: translateX(-50%)
-        top: -300px
+        top: -200px
         z-index: 1
         animation: 1.8s infinite lamps-light ease-in-out
         @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
-          background: url("../img/wheel-light.svg") no-repeat 50% 50%/contain
+          background: url("../img/wheel-light.png") no-repeat 50% 50%/contain
         @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
-          background: url("../img/wheel-light.svg") no-repeat 50% 50%/contain
+          background: url("../img/wheel-light.png") no-repeat 50% 50%/contain
         @media screen and (max-width: 550px) and (orientation: portrait)
-          background: url("../img/wheel-light-mob.svg") no-repeat 50% 50%/contain
+          background: none
+          display: none
         @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
-          background: url("../img/wheel-light-mob.svg") no-repeat 50% 50%/contain
-  &__info
+          background: none
+          display: none
+  &__text
+    //opacity: 0
+    //visibility: hidden
     position: absolute
-    bottom: 88px
     left: 35px
-    z-index: 7
-    &-top
-      font-family: $font-suisse-reg
-      font-size: 8px
-      line-height: 22px
-      color: rgba(255, 255, 255, 0.2)
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25)
-      a
-        font-family: $font-suisse-reg
-        color: rgba(255, 255, 255, 0.2)
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25)
-    &-bottom
-      font-family: $font-suisse-reg
-      color: rgba(255, 255, 255, 0.8)
+    z-index: 8
+    bottom: 90px
+    font-family: $font-suisse-reg
+    font-size: 14px
+    line-height: 22px
+    color: #FFFFFF
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25)
+    transition: opacity 1s ease, visibility .3s ease
+    a
       font-size: 14px
       line-height: 22px
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25)
-      a
-        text-decoration: underline
-        color: rgba(255, 255, 255, 0.8)
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25)
-        &:hover
-          text-decoration: none
+      pointer-events: initial
+      color: #FFFFFF
+      text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25)
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+    &._visible
+      opacity: 1
   &__footer
     position: absolute
     z-index: 11
@@ -837,6 +1083,101 @@ body
   opacity: 0
   visibility: hidden
 
+@keyframes salut-one
+  0%
+    opacity: 0
+    transform: scale(0)
+  70%
+    opacity: 1
+    transform: scale(1)
+  100%
+    opacity: 0
+    transform: scale(1.1)
+
+@keyframes salut-two
+  0%
+    opacity: 0
+    transform: scale(0)
+  40%
+    opacity: 1
+    transform: scale(1)
+  100%
+    opacity: 0
+    transform: scale(1)
+
+@keyframes bg-start
+  0%
+    transform: scale(1)
+  100%
+    transform: scale(1.2)
+
+@keyframes border-opacity
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes welcome-opacity
+  0%
+    opacity: 0
+  33.333%
+    opacity: 1
+  66.6666%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes fav-opacity
+  0%
+    opacity: 0
+  20%
+    opacity: 1
+  50%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes salut-one
+  0%
+    opacity: 0
+    transform: scale(0)
+  70%
+    opacity: 1
+    transform: scale(1)
+  100%
+    opacity: 0
+    transform: scale(1.1)
+
+@keyframes salut-two
+  0%
+    opacity: 0
+    transform: scale(0)
+  40%
+    opacity: 1
+    transform: scale(1)
+  100%
+    opacity: 0
+    transform: scale(1)
+
+@keyframes btn-anim
+  0%
+    transform: translate(-50%, -50%) scale(1)
+    opacity: 0
+  40%
+    transform: translate(-50%, -50%) scale(1)
+    opacity: 1
+  100%
+    transform: translate(-50%, -50%) scale(1.05)
+    opacity: 0
+
+@keyframes btn-anim-scale
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.02)
+  100%
+    transform: scale(1)
+
 @keyframes light-one
   0%
     transform: rotate(5deg)
@@ -893,25 +1234,3 @@ body
   100%
     transform: rotate(-10deg)
 
-
-@keyframes salut-one
-  0%
-    opacity: 0
-    transform: scale(0)
-  70%
-    opacity: 1
-    transform: scale(1)
-  100%
-    opacity: 0
-    transform: scale(1.1)
-
-@keyframes salut-two
-  0%
-    opacity: 0
-    transform: scale(0)
-  40%
-    opacity: 1
-    transform: scale(1)
-  100%
-    opacity: 0
-    transform: scale(1)
