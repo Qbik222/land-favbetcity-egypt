@@ -407,11 +407,7 @@ body
       font-size: 28px
       line-height: 30px
       text-transform: uppercase
-      background: linear-gradient(168.7deg, #FFFFFF 28.76%, #FFFFFF 53.53%, #FFFFA3 64.78%)
-      -webkit-background-clip: text
-      -webkit-text-fill-color: transparent
-      background-clip: text
-      text-fill-color: transparent
+      color: $white
       -webkit-text-stroke: .9px #FF364B
       margin: 0 0 5px 0
       &::before
@@ -469,6 +465,12 @@ body
         color: #FFFFFF
         text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.33)
         transform: rotate(-12.82deg)
+    &-btn
+      img
+        position: relative
+        top: -16px
+        max-width: 247px
+        left: 3px
   &__secondWin
     transition: 1.1s ease
     position: static
@@ -520,11 +522,7 @@ body
       font-size: 18px
       line-height: 19px
       text-transform: uppercase
-      background: linear-gradient(168.7deg, #FFFFFF 28.76%, #FFFFFF 53.53%, #FFFFA3 64.78%)
-      -webkit-background-clip: text
-      -webkit-text-fill-color: transparent
-      background-clip: text
-      text-fill-color: transparent
+      color: $white
       -webkit-text-stroke: .7px #FF364B
       margin: 0 0 5px 0
       &::before
@@ -585,11 +583,7 @@ body
       font-size: 18px
       line-height: 28px
       text-transform: uppercase
-      background: linear-gradient(168.7deg, #FFFFFF 28.76%, #FFFFFF 53.53%, #FFFFA3 64.78%)
-      -webkit-background-clip: text
-      -webkit-text-fill-color: transparent
-      background-clip: text
-      text-fill-color: transparent
+      color: $white
       -webkit-text-stroke: .7px #FF364B
       margin: 0 0 5px 0
     &-win
@@ -612,8 +606,15 @@ body
         text-decoration: underline
         &:hover
           text-decoration: none
+    &-btn
+      img
+        position: relative
+        top: -16px
+        max-width: 247px
+        left: 0
   &__music
     cursor: pointer
+    pointer-events: initial
     position: absolute
     top: 25px
     right: 65px
@@ -931,6 +932,7 @@ body
       &:hover
         text-decoration: none
     &._visible
+      display: block
       opacity: 1
       visibility: visible
   &__footer

@@ -586,7 +586,7 @@
           &-google
             width: 100px
 
-@media screen and (max-width: 1060px) and (max-height: 870px) and (orientation: landscape)
+@media screen and (max-width: 1080px) and (max-height: 870px) and (orientation: landscape)
   .bonus
     &__main
       &-pyramid
@@ -693,6 +693,11 @@
     &__firstWin,
     &__secondWin
       margin-top: 90px
+    &__firstWin
+      &-title
+        color: $white
+        background: none
+        -webkit-text-fill-color: inherit
     &__footer
       padding: 0 20px
     &__music
@@ -1328,7 +1333,8 @@
         transform: translateX(-50%) scale(0.4)
         bottom: -50px
       &-coala
-        top: 60px
+        width: 48vh
+        top: 40px
         right: 15%
         transform: scale(.8) translateX(50%)
         &-bubbleWrap
@@ -1390,7 +1396,7 @@
         left: 57%
         transform: translateY(-50%) translateX(-50%) scale(0.3)
       &-coala
-        top: 40px
+        top: 20px
         right: 19%
         transform: scale(0.75) translateX(50%)
 
@@ -1428,7 +1434,7 @@
       &-wrapper
         transform: translateX(-57%) scale(0.35)
 
-@media screen and (max-width: 740px) and (orientation: landscape) and (max-height: 390px)
+@media screen and (max-width: 752px) and (orientation: landscape) and (max-height: 390px)
   .bonus
     &__main
       &-wrapper
@@ -1437,14 +1443,21 @@
       &-coala
         right: 13%
 
-@media screen and (max-width: 740px) and (orientation: landscape) and (max-height: 360px)
+@media screen and (max-width: 752px) and (orientation: landscape) and (max-height: 360px)
   .bonus
     &__main
       &-wrapper
-        transform: translateX(-59%) scale(0.33)
+        transform: translateX(-59%) scale(0.31)
         bottom: -40px
       &-coala
         right: 13%
+
+@media screen and (max-width: 752px) and (orientation: landscape) and (max-height: 320px)
+  .bonus
+    &__main
+      &-wrapper
+        transform: translateX(-63%) scale(0.25)
+        bottom: -10px
 
 @media screen and (max-width: 660px) and (orientation: landscape) and (max-height: 330px)
   .bonus

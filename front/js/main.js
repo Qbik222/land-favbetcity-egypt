@@ -16,11 +16,19 @@ const playBtn = document.querySelector('.bonus__main-wheel-btn'),
       audioMain = document.querySelector('.audio-main'),
       audioWheel = document.querySelector('.audio-wheel'),
       btnVolume = document.querySelector('.bonus__music'),
-      btnVolumeImg = document.querySelector('.bonus__music-img')
+      btnVolumeImg = document.querySelector('.bonus__music-img'),
+      body = document.querySelector('body')
 
 audioMain.volume = 0.6
+//audioMain.volume = 0
 
-
+function scrollToTop() {
+    const currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+    if (currentPosition > 0) {
+        window.requestAnimationFrame(scrollToTop);
+        window.scrollTo(0, currentPosition - currentPosition / 8);
+    }
+}
 
 btnVolume.addEventListener('click', () => {
     if(btnVolume.classList.contains('off')){
@@ -75,6 +83,9 @@ playBtn.addEventListener('click', () => {
 })
 
 function runFirstRotation() {
+    scrollToTop()
+    btnVolume.classList.remove('off')
+    btnVolume.classList.add('on')
     btnVolumeImg.setAttribute('src', 'img/sound-on.svg')
     audioMain.play()
     audioFirework.play()
@@ -84,6 +95,7 @@ function runFirstRotation() {
     playBtn.style.cursor = 'default'
     wrapper.style.pointerEvents = 'none'
     wrapper.style.overflow = 'hidden'
+    body.style.overflow = 'hidden'
     setTimeout(() => {
         doAfterFirstRotation()
     }, 6000)
