@@ -19,8 +19,8 @@ const playBtn = document.querySelector('.bonus__main-wheel-btn'),
       btnVolumeImg = document.querySelector('.bonus__music-img'),
       body = document.querySelector('body')
 
-audioMain.volume = 0.6
-//audioMain.volume = 0
+//audioMain.volume = 0.6
+audioMain.volume = 0
 
 function scrollToTop() {
     const currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
