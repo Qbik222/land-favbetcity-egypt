@@ -68,7 +68,7 @@ copyBtn.addEventListener('click', () => {
     setTimeout(()=>{
         copyBtn.classList.remove('_copy')
     }, 2000)
-    let textToCopy = "FAVBETSEM";
+    let textToCopy = "egyptsem";
     // Копируем текст в буфер обмена
     navigator.clipboard.writeText(textToCopy)
         .then(function() {
