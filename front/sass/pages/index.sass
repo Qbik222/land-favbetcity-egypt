@@ -10,6 +10,12 @@ $font-suisse-reg: SuisseIntl-Regular, sans-serif //400
 $font-elmerssiri: CElMessiri-Bold, sans-serif
 $font-din: DINPro-CondLight, sans-serif
 
+.menu-test
+  position: fixed
+  z-index: 20
+  display: flex
+  flex-direction: column
+
 body
   -webkit-tap-highlight-color: rgba(0,0,0,0)
   overscroll-behavior: none
@@ -51,13 +57,15 @@ body
       width: 100%
       height: 100%
       animation: bg-start 8s ease
+      background: #005 url('../img/bg-desc-start.jpg') no-repeat 50% 0/cover
       @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
         background: #005 url('../img/bg-desc-start.jpg') no-repeat 50% 0/cover
-      @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+      @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
         background: #005  url('../img/bg-tab-start.jpg') no-repeat 50% 0/cover
       @media screen and (max-width: 600px) and (orientation: portrait)
+      @media screen and (max-width: 600px) and (orientation: portrait)
         background: #005 url("../img/bg-mob-start.jpg") no-repeat 50% 0%/cover
-      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
         background: #005 url("../img/bg-landscape-start.jpg") no-repeat 50% 0/cover
     &-wrap
       position: absolute
@@ -83,13 +91,14 @@ body
         transform: translateX(-50%)
         width: 110.6%
         height: 540px
+        background: url('../img/border-desk.png') no-repeat 50% 0/contain
         @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
           background: url('../img/border-desk.png') no-repeat 50% 0/contain
-        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
           background:  url('../img/border-desk.png') no-repeat 50% 0/contain
         @media screen and (max-width: 600px) and (orientation: portrait)
           background: url("../img/border-mob.png") no-repeat 50% 0%/contain
-        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
           background: url("../img/border-mob.png") no-repeat 50% 0/contain
         animation: border-opacity 1s ease
       &-welcome
@@ -99,13 +108,14 @@ body
         transform: translateX(-50%)
         width: 110.6%
         height: 540px
+        background: url('../img/welcome-desk.png') no-repeat 50% 0/contain
         @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
           background: url('../img/welcome-desk.png') no-repeat 50% 0/contain
-        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
           background:  url('../img/welcome-desk.png') no-repeat 50% 0/contain
         @media screen and (max-width: 600px) and (orientation: portrait)
           background: url("../img/welcome-mob.png") no-repeat 50% 0%/contain
-        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
           background: url("../img/welcome-mob.png") no-repeat 50% 0/contain
         opacity: 0
         animation: welcome-opacity .5s ease forwards
@@ -117,13 +127,14 @@ body
         transform: translateX(-50%)
         width: 125.3%
         height: 540px
+        background: url('../img/fav-desk.png') no-repeat 50% 0/contain
         @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
           background: url('../img/fav-desk.png') no-repeat 50% 0/contain
-        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
           background:  url('../img/fav-desk.png') no-repeat 50% 0/contain
         @media screen and (max-width: 600px) and (orientation: portrait)
           background: url("../img/fav-mob.png") no-repeat 50% 0%/contain
-        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
           background: url("../img/fav-mob.png") no-repeat 50% 0/contain
         opacity: 0
         animation: fav-opacity .5s ease forwards
@@ -135,13 +146,14 @@ body
         transform: translateX(-50%)
         width: 107.3%
         height: 540px
+        background: url('../img/your-desk.png') no-repeat 50% 0/contain
         @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
           background: url('../img/your-desk.png') no-repeat 50% 0/contain
-        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
           background:  url('../img/your-desk.png') no-repeat 50% 0/contain
         @media screen and (max-width: 600px) and (orientation: portrait)
           background: url("../img/your-mob.png") no-repeat 50% 0%/contain
-        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
           background: url("../img/your-mob.png") no-repeat 50% 0/contain
         opacity: 0
         animation: border-opacity .4s ease forwards
@@ -153,13 +165,14 @@ body
         transform: translateX(-50%)
         width: 107.3%
         height: 324px
+        background: url('../img/arrow-desk.png') no-repeat 50% 0/contain
         @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
           background: url('../img/arrow-desk.png') no-repeat 50% 0/contain
-        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
           background:  url('../img/arrow-desk.png') no-repeat 50% 0/contain
         @media screen and (max-width: 600px) and (orientation: portrait)
           background: url("../img/arrow-mob.png") no-repeat 50% 0%/contain
-        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
           background: url("../img/arrow-mob.png") no-repeat 50% 0/contain
         opacity: 0
         animation: welcome-opacity .5s ease forwards
@@ -170,13 +183,14 @@ body
         right: 78px
         width: 312px
         height: 312px
+        background: url('../img/icon1-desk.png') no-repeat 50% 0/contain
         @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
           background: url('../img/icon1-desk.png') no-repeat 50% 0/contain
-        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
           background:  url('../img/icon1-desk.png') no-repeat 50% 0/contain
         @media screen and (max-width: 600px) and (orientation: portrait)
           background: url("../img/icon1-mob.png") no-repeat 50% 0%/contain
-        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
           background: url("../img/icon1-mob.png") no-repeat 50% 0/contain
         opacity: 0
         animation: border-opacity .2s ease forwards
@@ -187,13 +201,14 @@ body
         right: 77px
         width: 312px
         height: 312px
+        background: url('../img/icon2-desk.png') no-repeat 50% 0/contain
         @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
           background: url('../img/icon2-desk.png') no-repeat 50% 0/contain
-        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
           background:  url('../img/icon2-desk.png') no-repeat 50% 0/contain
         @media screen and (max-width: 600px) and (orientation: portrait)
           background: url("../img/icon2-mob.png") no-repeat 50% 0%/contain
-        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
           background: url("../img/icon2-mob.png") no-repeat 50% 0/contain
         opacity: 0
         animation: border-opacity .2s ease forwards
@@ -204,13 +219,14 @@ body
         right: 77px
         width: 312px
         height: 312px
+        background: url('../img/icon3-desk.png') no-repeat 50% 0/contain
         @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
           background: url('../img/icon3-desk.png') no-repeat 50% 0/contain
-        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
           background:  url('../img/icon3-desk.png') no-repeat 50% 0/contain
         @media screen and (max-width: 600px) and (orientation: portrait)
           background: url("../img/icon3-mob.png") no-repeat 50% 0%/contain
-        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
           background: url("../img/icon3-mob.png") no-repeat 50% 0/contain
         opacity: 0
         animation: border-opacity .2s ease forwards
@@ -262,13 +278,14 @@ body
   height: 100%
   overflow: hidden
   position: relative
+  background: #005 url('../img/bg-desc.jpg') no-repeat 50% 0/cover
   @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
     background: #005 url('../img/bg-desc.jpg') no-repeat 50% 0/cover
-  @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+  @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
     background: #005  url('../img/bg-tab.jpg') no-repeat 50% 0/cover
   @media screen and (max-width: 600px) and (orientation: portrait)
     background: #005 url("../img/bg-mob.jpg") no-repeat 50% 0%/cover
-  @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+  @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
     background: #005 url("../img/bg-landscape.jpg") no-repeat 50% 0/cover
   &__overlay
     display: flex
@@ -288,13 +305,14 @@ body
       height: 100%
       top: 0
       left: 0
+      background: url('../img/bg-popup.jpg') no-repeat 50% 0/cover
       @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
         background: url('../img/bg-popup.jpg') no-repeat 50% 0/cover
-      @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+      @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
         background:  url('../img/bg-popup.jpg') no-repeat 50% 0/cover
       @media screen and (max-width: 600px) and (orientation: portrait)
         background: url("../img/bg-popup-mob.jpg") no-repeat 50% 0%/cover
-      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
         background: url("../img/bg-popup-landscape.jpg") no-repeat 50% 0/cover
       animation: 8s infinite pulse-btn ease-in-out
   &__firstWin,
@@ -308,13 +326,14 @@ body
         margin-bottom: -185px
         min-width: 450px
         height: 450px
+        background: url('../img/popup-bg.png') no-repeat 50% 0/contain
         @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
           background: url('../img/popup-bg.png') no-repeat 50% 0/contain
-        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
           background:  url('../img/popup-bg.png') no-repeat 50% 0/contain
         @media screen and (max-width: 600px) and (orientation: portrait)
           background: url("../img/popup-bg-mob.png") no-repeat 50% 0%/contain
-        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
           background: url("../img/popup-bg-mob.png") no-repeat 50% 0/contain
         transform: scale(1)
         position: relative
@@ -337,13 +356,14 @@ body
       width: 259px
       height: 188px
       text-align: center
+      background: url('../img/bubble-popup.png') no-repeat 50% 0/contain
       @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
         background: url('../img/bubble-popup.png') no-repeat 50% 0/contain
-      @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+      @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
         background:  url('../img/bubble-popup.png') no-repeat 50% 0/contain
       @media screen and (max-width: 600px) and (orientation: portrait)
         background: url("../img/bubble-popup-mob.png") no-repeat 50% 0%/contain
-      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
         background: url("../img/bubble-popup-mob.png") no-repeat 50% 0/contain
     &-btn
       text-decoration: none !important
@@ -422,13 +442,14 @@ body
     &-win
       width: 332px
       height: 135px
+      background: url('../img/win-text-desc.png') no-repeat 50% 0/contain
       @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
         background: url('../img/win-text-desc.png') no-repeat 50% 0/contain
-      @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+      @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
         background:  url('../img/win-text-desc.png') no-repeat 50% 0/contain
       @media screen and (max-width: 600px) and (orientation: portrait)
         background: url("../img/win-text-mob.png") no-repeat 50% 0%/contain
-      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
         background: url("../img/win-text-mob.png") no-repeat 50% 0/contain
     &-bubble
       font-family: $font-elmerssiri
@@ -816,13 +837,14 @@ body
         top: -26%
       &-bubbleOne
         transform-origin: bottom left
+        background: url('../img/bubble-desc.png') no-repeat 50% 0/contain
         @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
           background: url('../img/bubble-desc.png') no-repeat 50% 0/contain
-        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+        @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
           background:  url('../img/bubble-desc.png') no-repeat 50% 0/contain
         @media screen and (max-width: 600px) and (orientation: portrait)
           background: url("../img/bubble-mob.png") no-repeat 50% 0%/contain
-        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
           background: url("../img/bubble-mob.png") no-repeat 50% 0/contain
         position: absolute
         top: 120px
@@ -852,13 +874,13 @@ body
         z-index: 5
         top: -247px
         cursor: pointer
-        @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        @media screen and (min-width: 601px) and (orientation: landscape) and (min-height: 500px)
           background: url("../img/wheel-btn.png") no-repeat 0 0/contain
-        @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
           background: url("../img/wheel-btn.png") no-repeat 0 0/contain
-        @media screen and (max-width: 550px) and (orientation: portrait)
+        @media screen and (max-width: 600px) and (orientation: portrait)
           background: url("../img/wheel-btn-mob.png") no-repeat 0 0/contain
-        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
           background: url("../img/wheel-btn-mob.png") no-repeat 0 0/contain
       &-frame
         width: 678px
@@ -866,13 +888,13 @@ body
         position: relative
         margin: auto
         z-index: 3
-        @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        @media screen and (min-width: 601px) and (orientation: landscape) and (min-height: 500px)
           background: url("../img/wheel-frame.png") no-repeat 0 0/contain
-        @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
           background: url("../img/wheel-frame.png") no-repeat 0 0/contain
-        @media screen and (max-width: 550px) and (orientation: portrait)
+        @media screen and (max-width: 600px) and (orientation: portrait)
           background: url("../img/wheel-frame-mob-2.png") no-repeat 0 0/contain
-        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
           background: url("../img/wheel-frame-mob-2.png") no-repeat 0 0/contain
       &-reel
         width: 670px
@@ -881,13 +903,13 @@ body
         left: -3px
         bottom: auto
         z-index: 2
-        @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        @media screen and (min-width: 601px) and (orientation: landscape) and (min-height: 500px)
           background: url("../img/wheel-reel.png") no-repeat 0 0/contain
-        @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
           background: url("../img/wheel-reel.png") no-repeat 0 0/contain
-        @media screen and (max-width: 550px) and (orientation: portrait)
+        @media screen and (max-width: 600px) and (orientation: portrait)
           background: url("../img/wheel-reel-mob-2.png") no-repeat 0 0/contain
-        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
           background: url("../img/wheel-reel-mob-2.png") no-repeat 0 0/contain
       &-light
         pointer-events: none
@@ -898,14 +920,14 @@ body
         top: -200px
         z-index: 1
         animation: 1.8s infinite lamps-light ease-in-out
-        @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        @media screen and (min-width: 601px) and (orientation: landscape) and (min-height: 500px)
           background: url("../img/wheel-light.png") no-repeat 50% 50%/contain
-        @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        @media screen and (min-width: 601px) and (max-width: 1300px) and (orientation: portrait)
           background: url("../img/wheel-light.png") no-repeat 50% 50%/contain
-        @media screen and (max-width: 550px) and (orientation: portrait)
+        @media screen and (max-width: 600px) and (orientation: portrait)
           background: none
           display: none
-        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        @media (max-width: 950px) and (orientation: landscape) and (max-height: 450px)
           background: none
           display: none
   &__text
@@ -919,7 +941,7 @@ body
     font-size: 14px
     line-height: 22px
     color: #FFFFFF
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25)
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 1)
     transition: opacity 1s ease, visibility .3s ease
     a
       font-size: 14px
@@ -983,7 +1005,6 @@ body
     font-family: $font-din
     font-size: 2.55vw
     color: #000
-    height: 75px
     justify-content: center
     align-items: center
     padding-top: 3px
@@ -1059,11 +1080,11 @@ body
   0%
     transform: rotate(0deg)
   80%
-    transform: rotate(998deg)
+    transform: rotate(1446deg)
   90%
-    transform: rotate(986deg)
+    transform: rotate(1434deg)
   100%
-    transform: rotate(992deg)
+    transform: rotate(1440deg)
 
 .reel-rotation-second
   animation: 6s reel-rotation-second cubic-bezier(.25,.75,.5,1.05) forwards
