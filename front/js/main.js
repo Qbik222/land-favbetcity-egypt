@@ -184,20 +184,3 @@ window.addEventListener('orientationchange', () => {
         }
     });
 })();
-
-const popupFirstBtnTest = document.querySelector(".show-popup");
-const popupFirstBtnClose = document.querySelector(".close-popup");
-
-popupFirstBtnTest.addEventListener("click", () =>{
-    displayPopup(popupFirst)
-    wrapper.style.pointerEvents = 'auto'
-    overflow.style.overflow = 'hidden'
-})
-
-popupFirstBtnClose.addEventListener("click", () =>{
-    overlay.classList.add('opacity-overlay')
-    popupFirst.classList.add('hide')
-    overflow.style.overflow = 'auto'
-})
-
-
